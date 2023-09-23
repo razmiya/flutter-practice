@@ -126,6 +126,7 @@ class Practice extends StatefulWidget {
 }
 
 class _PracticeState extends State<Practice> {
+  bool colorchange=false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -136,7 +137,17 @@ class _PracticeState extends State<Practice> {
       ) ,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          print('floating action button');
+          setState(() {
+            if(colorchange==false)
+            {
+              colorchange=true;
+            }
+            else
+            {
+              colorchange=false;
+            }
+          });
+
         },
         child: Icon(
           Icons.add
@@ -149,7 +160,7 @@ class _PracticeState extends State<Practice> {
         decoration: BoxDecoration(
           border: Border.all(color: Colors.black,width: 5),
             borderRadius: BorderRadius.circular(200),
-          color: Colors.purple,
+          color: colorchange? Colors.purple:Colors.pink,
           boxShadow: [
             BoxShadow(
               spreadRadius: 4,

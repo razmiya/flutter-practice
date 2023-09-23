@@ -1,6 +1,9 @@
 import 'package:androidstudioproject/practice.dart';
 import 'package:flutter/material.dart';
+import 'package:androidstudioproject/practice2.dart';
 
+import 'checkbox.dart';
+import 'elevated.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -32,7 +35,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:Practice(),
+      home:Elevatedbuttondemo (),
     );
   }
 }
